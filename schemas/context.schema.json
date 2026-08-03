@@ -1,0 +1,38 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "UOMPStockContext",
+  "type": "object",
+  "required": [
+    "holdings",
+    "profile"
+  ],
+  "properties": {
+    "holdings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "ticker",
+          "qty"
+        ],
+        "properties": {
+          "ticker": {
+            "type": "string"
+          },
+          "qty": {
+            "type": "number"
+          },
+          "cost_basis": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "profile": {
+      "type": "string"
+    },
+    "horizon_months": {
+      "type": "integer"
+    }
+  }
+}
